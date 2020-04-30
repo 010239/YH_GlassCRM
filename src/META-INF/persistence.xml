@@ -1,0 +1,66 @@
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<!-- <persistence-unit name="crm.backend" transaction-type="JTA"> -->
+	<persistence-unit name="crm.backend"
+		transaction-type="RESOURCE_LOCAL">
+		<class>crm.backend.entity.Account</class>
+		<class>crm.backend.entity.Customer</class>
+		<class>crm.backend.entity.CustomerCheckInfo</class>
+		<class>crm.backend.entity.EyeCheckItem</class>
+		
+		<properties>
+			<property
+				name="javax.persistence.schema-generation.database.action"
+				value="update" />
+			<property name="javax.persistence.provider"
+				value="org.hibernate.jpa.HibernatePersistenceProvider" />
+			<property name="javax.persistence.jdbc.driver"
+				value="org.sqlite.JDBC" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:sqlite://d:/work.db" />
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.SQLiteDialect" />
+		    <property name="hibernate.hbm2ddl.auto" value="update"/> 
+		</properties>
+
+	<!-- <properties>
+		配置数据源信息
+		<property
+			name="javax.persistence.schema-generation.database.action"
+			value="update" />
+		<property name="javax.persistence.provider"
+			value="org.hibernate.jpa.HibernatePersistenceProvider" />
+		<property name="javax.persistence.jdbc.driver"
+			value="com.mysql.jdbc.Driver" />
+		
+		<property name="javax.persistence.jdbc.url"
+			value="jdbc:mysql://localhost:3306/crm?serverTimezone=UTC" />
+		<property name="javax.persistence.jdbc.user" value="root" />
+		<property name="javax.persistence.jdbc.password"
+			value="123456" />
+			配置JPA实现产品的属性
+		<property name="hibernate.dialect"
+			value="org.hibernate.dialect.MySQL5Dialect" /> 
+		
+	</properties> -->
+
+		<!-- <properties> -->
+		<!-- <property name="javax.persistence.schema-generation.database.action" -->
+		<!-- value="drop-and-create" /> -->
+		<!-- <property name="javax.persistence.provider" -->
+		<!-- value="org.hibernate.jpa.HibernatePersistenceProvider" /> -->
+		<!-- <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" 
+			/> -->
+		<!-- <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test" 
+			/> -->
+		<!-- <property name="javax.persistence.jdbc.user" value="sa" /> -->
+		<!-- <property name="javax.persistence.jdbc.password" value="" /> -->
+		<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" 
+			/> -->
+		<!-- <property name="hibernate.hbm2ddl.auto" value="create"/> -->
+		<!-- </properties> -->
+	</persistence-unit>
+</persistence>
