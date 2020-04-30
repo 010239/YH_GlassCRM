@@ -32,7 +32,7 @@ import org.eclipse.swt.widgets.ToolItem;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.wb.swt.SWTResourceManager;
 
-import com.ibm.icu.text.SimpleDateFormat;
+//import com.ibm.icu.text.SimpleDateFormat;
 
 import crm.backend.dao.CustomerDaoImpl;
 import crm.backend.dao.DAOFactory;
